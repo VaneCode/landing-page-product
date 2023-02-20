@@ -5,14 +5,8 @@ import {OrbitControls, useGLTF} from '@react-three/drei';
 import { BoxGeometry } from 'three';
 
 function App() {
-  const ref=useRef();
   return (
     <div className="App">
-     <Canvas>
-      <mesh ref={ref}>
-        <boxGeometry attach='geometry' args={[2,2,2]}/>
-      </mesh>
-     </Canvas>
      <div class="wrapper">
         <div class="card">
             <div class="product-canvas"></div>
