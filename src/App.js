@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './index';
+import { useRef, useState } from 'react';
+import {Canvas} from '@react-three/fiber';
+import {OrbitControls, useGLTF} from '@react-three/drei';
+import { BoxGeometry } from 'three';
 
 function App() {
+  const ref=useRef();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Canvas>
+      <mesh ref={ref}>
+        <boxGeometry attach='geometry' args={[2,2,2]}/>
+      </mesh>
+     </Canvas>
     </div>
   );
 }
