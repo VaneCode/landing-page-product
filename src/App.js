@@ -8,10 +8,15 @@ function App() {
   return (
     <div className="App">
      <div class="wrapper">
-        <div class="card">
-            <div class="product-canvas"></div>
+        <div className="card">
+            <div class="product-canvas">
+              <Canvas>
+                
+
+              </Canvas>
+            </div>
             <h2>Color chooser</h2>
-            <div class='colors'>
+            <div className='colors'>
                  <div>
                     <input type="color" id="head" name="head"
                            value="#e66465" />
