@@ -1,5 +1,5 @@
 import './index';
-import { useRef, useState } from 'react';
+import { Suspense, useRef, useState } from 'react';
 import {Canvas} from '@react-three/fiber';
 import {OrbitControls, useGLTF} from '@react-three/drei';
 
@@ -21,14 +21,19 @@ function Model({ ...props }) {
 }
 
 function App() {
+  const [mesh,setMesh] = useState("#ffffff")
+  const [stripes,setStripes] = useState("#ffffff")
+  const [soul,setSoul] = useState("#ffffff")
   return (
     <div className="App">
      <div className="wrapper">
         <div className="card">
             <div className="product-canvas">
               <Canvas>
-
-
+                <Suspense fallback={null}>
+                  <ambientLight/>
+                  <Model/>
+                </Suspense>
               </Canvas>
             </div>
             <h2>Color chooser</h2>
