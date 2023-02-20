@@ -42,7 +42,7 @@ function App() {
                 </Suspense>
               </Canvas>
             </div>
-            <h2>Color chooser</h2>
+            <h2>Make your own design!</h2>
             <div className='colors'>
                  <div>
                     <input type="color" id="mesh" name="mesh"
