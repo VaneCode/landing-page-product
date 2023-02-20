@@ -23,9 +23,9 @@ function Model({ ...props }) {
 function App() {
   return (
     <div className="App">
-     <div class="wrapper">
+     <div className="wrapper">
         <div className="card">
-            <div class="product-canvas">
+            <div className="product-canvas">
               <Canvas>
 
 
